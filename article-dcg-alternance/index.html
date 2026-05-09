@@ -211,13 +211,14 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 .main-breadcrumb p a{color:#15a8b4 !important;text-decoration:none}
 .main-breadcrumb p strong{color:#575757 !important;font-weight:500 !important}
 
-/* Layout article : contenu principal large + sidebar etroite (override theme) */
-main .row{align-items:flex-start !important;gap:32px}
-main .col.l7{flex:1 1 auto !important;flex-basis:auto !important;max-width:calc(100% - 312px) !important;width:auto !important}
-main .col.l4.article-sidebar{flex:0 0 280px !important;flex-basis:280px !important;max-width:280px !important;width:280px !important;margin-left:0 !important}
+/* Layout article : CSS Grid 2 colonnes (override theme flex) */
+main > .wrapper > .row{display:grid !important;grid-template-columns:minmax(0,1fr) 280px !important;gap:32px !important;align-items:start !important;flex-wrap:nowrap !important;width:100% !important;max-width:100% !important}
+main > .wrapper > .row > .col.l7{max-width:none !important;width:auto !important;flex:none !important;flex-basis:auto !important;min-width:0 !important;margin:0 !important;padding:0 !important;grid-column:1}
+main > .wrapper > .row > .col.l4.article-sidebar{max-width:none !important;width:auto !important;flex:none !important;flex-basis:auto !important;min-width:0 !important;margin:0 !important;padding:0 !important;grid-column:2}
 @media (max-width:992px){
-  main .col.l7{max-width:100% !important;width:100% !important}
-  main .col.l4.article-sidebar{flex:1 1 100% !important;flex-basis:100% !important;max-width:100% !important;width:100% !important;order:-1;margin-bottom:24px}
+  main > .wrapper > .row{grid-template-columns:1fr !important}
+  main > .wrapper > .row > .col.l4.article-sidebar{grid-column:1;order:-1;margin-bottom:24px !important}
+  main > .wrapper > .row > .col.l7{grid-column:1}
 }
 
 /* Sidebar avec sommaire sticky compact */
