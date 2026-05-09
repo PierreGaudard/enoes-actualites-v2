@@ -211,9 +211,24 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 .main-breadcrumb p a{color:#15a8b4 !important;text-decoration:none}
 .main-breadcrumb p strong{color:#575757 !important;font-weight:500 !important}
 
-/* Sidebar avec sommaire sticky */
-.article-sidebar{position:sticky;top:24px;align-self:start}
-.article-sidebar .article-toc{margin:0 0 24px}
+/* Layout article : 2 colonnes contenu + sidebar */
+main > .wrapper > .row{display:flex !important;flex-wrap:wrap;gap:32px;align-items:flex-start}
+main > .wrapper > .row > .col.l7{flex:1 1 auto !important;width:auto !important;max-width:none !important;margin:0 !important;padding:0 !important;min-width:0}
+main > .wrapper > .row > .col.l4{flex:0 0 280px !important;width:280px !important;max-width:280px !important;margin:0 !important;padding:0 !important;min-width:0}
+@media (max-width:992px){
+  main > .wrapper > .row{flex-direction:column}
+  main > .wrapper > .row > .col.l4{flex:1 1 auto !important;width:100% !important;max-width:100% !important;order:-1}
+}
+
+/* Sidebar avec sommaire sticky compact */
+.article-sidebar{position:sticky;top:24px;align-self:flex-start}
+.article-sidebar .article-toc{margin:0 0 24px;padding:16px 18px;background:#f9f9fb;border-left:3px solid #15a8b4}
+.article-sidebar .article-toc summary{font-size:14px}
+.article-sidebar .article-toc ol{padding-left:18px;margin:12px 0 0}
+.article-sidebar .article-toc ol li{margin:4px 0}
+.article-sidebar .article-toc ol li a{font-size:12px;line-height:1.4}
+.article-sidebar .article-toc ol ol{margin-top:2px;padding-left:14px}
+.article-sidebar .article-toc ol ol li a{font-size:11px}
 @media (max-width:992px){.article-sidebar{position:static}}
 
 /* Bloc auteur en haut */
@@ -501,7 +516,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Meta article : categorie + auteur + date pub + maj + temps lecture -->
     <div class="article-meta">
       <span class="meta-author">
-        <img src="https://i.pravatar.cc/100?img=47" alt="Sophie Lambert" loading="lazy" />
+        <img src="../uploads/avatars/sophie-lambert.svg" alt="Sophie Lambert" loading="lazy" />
         <span><strong>Sophie Lambert</strong><span>Responsable pédagogique DCG</span></span>
       </span>
       <span class="meta-sep">|</span>
@@ -720,7 +735,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Bloc auteur fin d'article -->
 <aside class="article-author-box">
-  <img src="https://i.pravatar.cc/240?img=47" alt="Sophie Lambert, responsable pédagogique DCG à ENOES" loading="lazy">
+  <img src="../uploads/avatars/sophie-lambert.svg" alt="Sophie Lambert, responsable pédagogique DCG à ENOES" loading="lazy">
   <div>
     <h3 class="author-name">Sophie Lambert</h3>
     <p class="author-role">Responsable pédagogique DCG · ENOES</p>
@@ -777,7 +792,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="comment">
     <div class="comment-header">
-      <img src="https://i.pravatar.cc/100?img=12" alt="Camille D." loading="lazy">
+      <img src="../uploads/avatars/camille-d.svg" alt="Camille D." loading="lazy">
       <div>
         <strong>Camille D.</strong>
         <time datetime="2026-04-22">22 avril 2026</time>
@@ -788,7 +803,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="comment">
     <div class="comment-header">
-      <img src="https://i.pravatar.cc/100?img=33" alt="Thomas R." loading="lazy">
+      <img src="../uploads/avatars/thomas-r.svg" alt="Thomas R." loading="lazy">
       <div>
         <strong>Thomas R.</strong>
         <time datetime="2026-04-25">25 avril 2026</time>
@@ -799,7 +814,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="comment">
     <div class="comment-header">
-      <img src="https://i.pravatar.cc/100?img=68" alt="Léa M." loading="lazy">
+      <img src="../uploads/avatars/lea-m.svg" alt="Léa M." loading="lazy">
       <div>
         <strong>Léa M., équipe ENOES</strong>
         <time datetime="2026-04-26">26 avril 2026</time>
