@@ -198,16 +198,23 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 		  
 <!-- Custom styles V2 : ajouts UX/SEO sans toucher au theme -->
 <style id="enoes-article-v2-css">
-/* Header article : H1 et image hero re-dimensionnes pour ligne de flottaison */
-.entry-header h1.entry-title{font-size:30px !important;line-height:1.25 !important;margin:12px 0 16px !important;font-weight:700 !important;letter-spacing:-.3px}
-@media (max-width:600px){.entry-header h1.entry-title{font-size:24px !important}}
-.entry-thumbnail{margin:0 0 20px !important;border-radius:12px;overflow:hidden;max-height:340px}
-.entry-thumbnail img{width:100% !important;height:auto !important;max-height:340px !important;object-fit:cover !important;display:block}
-@media (max-width:768px){.entry-thumbnail,.entry-thumbnail img{max-height:240px !important}}
+/* Header article : layout 2 colonnes texte+image */
+.entry-header{margin-bottom:32px !important}
+.entry-header-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;margin-top:16px}
+@media (max-width:768px){.entry-header-grid{grid-template-columns:1fr;gap:20px}}
+.entry-header h1.entry-title{font-size:28px !important;line-height:1.25 !important;margin:0 0 12px !important;font-weight:700 !important;letter-spacing:-.3px}
+@media (max-width:600px){.entry-header h1.entry-title{font-size:22px !important}}
+.entry-thumbnail{margin:0 !important;border-radius:12px;overflow:hidden;aspect-ratio:4/3;max-height:none}
+.entry-thumbnail img{width:100% !important;height:100% !important;object-fit:cover !important;display:block}
 .main-breadcrumb{margin:0 0 16px !important;padding:0 !important}
 .main-breadcrumb p{font-size:12px !important;color:#82878a !important;margin:0 !important}
 .main-breadcrumb p a{color:#15a8b4 !important;text-decoration:none}
 .main-breadcrumb p strong{color:#575757 !important;font-weight:500 !important}
+
+/* Sidebar avec sommaire sticky */
+.article-sidebar{position:sticky;top:24px;align-self:start}
+.article-sidebar .article-toc{margin:0 0 24px}
+@media (max-width:992px){.article-sidebar{position:static}}
 
 /* Bloc auteur en haut */
 .article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 0;border-top:1px solid #ececec;border-bottom:1px solid #ececec;margin:20px 0;font-size:13px;color:#82878a}
@@ -481,67 +488,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
                       <div class="entry-header">
-              <h1 class="entry-title primary-color-alt">DCG en alternance ou en initial : quel choix selon votre profil et votre niveau après le bac ?</h1>
-              
 <div class="main-breadcrumb">
-  <div class="wrapper">
-    <p id="breadcrumbs"><span><span><a href="https://enoes.com/">ENOES</a></span> » <span><a href="https://enoes.com/actualites/">Actualités</a></span> » <span class="breadcrumb_last" aria-current="page"><strong>DCG en alternance ou en initial : quel choix selon votre profil et votre niveau après le bac ?</strong></span></span></p>  </div>
-</div>
-            </div>
-          
-          
-                          <figure class="entry-thumbnail animated fade-in-up">
-                <img width="800" height="600" src="../uploads/2026/04/dcg-alternance-ou-initiale.webp" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="DCG en alternance ou en initial : comparatif et conseils" decoding="async" fetchpriority="high" srcset="../uploads/2026/04/dcg-alternance-ou-initiale.webp 800w, ../uploads/2026/04/dcg-alternance-ou-initiale-300x225.webp 300w, ../uploads/2026/04/dcg-alternance-ou-initiale-768x576.webp 768w" sizes="(max-width: 800px) 100vw, 800px" />                              </figure>
-
-<!-- Meta article : categorie + auteur + date pub + maj + temps lecture -->
-<div class="article-meta">
-  <span class="meta-cat">Blog</span>
-  <span class="meta-author">
-    <img src="https://i.pravatar.cc/100?img=47" alt="Sophie Lambert" loading="lazy" />
-    <span><strong>Sophie Lambert</strong><span>Responsable pédagogique DCG</span></span>
-  </span>
-  <span class="meta-sep">|</span>
-  <span>Publié le <time datetime="2026-04-14">14 avril 2026</time></span>
-  <span class="meta-sep">|</span>
-  <span class="meta-update">Mis à jour le <time datetime="2026-05-02">2 mai 2026</time></span>
-  <span class="meta-sep">|</span>
-  <span>📖 7 min de lecture</span>
+    <p id="breadcrumbs"><span><span><a href="https://enoes.com/">Accueil</a></span> » <span><a href="https://enoes.com/actualites/">Actualités</a></span> » <span class="breadcrumb_last" aria-current="page"><strong>DCG en alternance ou en initial</strong></span></span></p>
 </div>
 
-<!-- Boutons de partage -->
-<div class="article-share">
-  <span class="share-label">Partager :</span>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://enoes.com/actualites/dcg-en-alternance-ou-en-initial-quel-choix-selon-votre-profil-et-votre-niveau-apres-le-bac/" target="_blank" rel="noopener" aria-label="Partager sur LinkedIn" title="LinkedIn">in</a>
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https://enoes.com/actualites/dcg-en-alternance-ou-en-initial-quel-choix-selon-votre-profil-et-votre-niveau-apres-le-bac/" target="_blank" rel="noopener" aria-label="Partager sur Facebook" title="Facebook">f</a>
-  <a href="https://twitter.com/intent/tweet?url=https://enoes.com/actualites/dcg-en-alternance-ou-en-initial-quel-choix-selon-votre-profil-et-votre-niveau-apres-le-bac/&text=DCG en alternance ou en initial : quel choix ?" target="_blank" rel="noopener" aria-label="Partager sur X (Twitter)" title="X / Twitter">𝕏</a>
-  <a href="mailto:?subject=DCG en alternance ou en initial&body=Article intéressant à lire : https://enoes.com/actualites/dcg-en-alternance-ou-en-initial-quel-choix-selon-votre-profil-et-votre-niveau-apres-le-bac/" aria-label="Partager par email" title="Email">✉</a>
-  <button type="button" class="copy-link" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Lien copié'">Copier le lien</button>
-</div>
+<div class="entry-header-grid">
+  <div class="entry-header-text">
+    <span class="meta-cat">Blog</span>
+    <h1 class="entry-title primary-color-alt">DCG en alternance ou en initial : quel choix selon votre profil et votre niveau après le bac ?</h1>
+    <p style="font-size:15px;line-height:1.55;color:#575757;margin:0 0 16px">Le choix entre le DCG en alternance ou en formation initiale dépend avant tout de trois éléments : votre autonomie, votre capacité de travail et votre projet professionnel après le bac.</p>
 
-<!-- Sommaire cliquable -->
-<details class="article-toc" open>
-  <summary>Sommaire de l'article</summary>
-  <ol>
-    <li><a href="#defi-accessible">Le DCG : un défi accessible après la terminale ?</a>
-      <ol>
-        <li><a href="#rythme-soutenu">Un rythme soutenu pour progresser efficacement</a></li>
-        <li><a href="#matieres-techniques">Des matières techniques pour développer des compétences solides</a></li>
-        <li><a href="#examens-exigeants">Des examens exigeants, à la hauteur du diplôme</a></li>
-        <li><a href="#dynamique-pro">Une nouvelle dynamique de travail, plus professionnalisante</a></li>
-        <li><a href="#parcours-3-ans">Un parcours structuré sur trois ans</a></li>
-      </ol>
-    </li>
-    <li><a href="#alternance-ou-initial">DCG alternance ou initial : quel choix selon son profil ?</a>
-      <ol>
-        <li><a href="#dcg-initial">Le DCG en formation initiale : sécuriser ses bases</a></li>
-        <li><a href="#dcg-alternance">Le DCG en alternance : entrer directement dans la pratique</a></li>
-      </ol>
-    </li>
-    <li><a href="#comparatif">DCG alternance ou initial : comparatif</a></li>
-    <li><a href="#du-dcg-au-dscg">Du DCG au DSCG : une progression encadrée</a></li>
-    <li><a href="#faq">FAQ</a></li>
-  </ol>
-</details>
+    <!-- Meta article : categorie + auteur + date pub + maj + temps lecture -->
+    <div class="article-meta">
+      <span class="meta-author">
+        <img src="https://i.pravatar.cc/100?img=47" alt="Sophie Lambert" loading="lazy" />
+        <span><strong>Sophie Lambert</strong><span>Responsable pédagogique DCG</span></span>
+      </span>
+      <span class="meta-sep">|</span>
+      <span>Publié le <time datetime="2026-04-14">14/04/2026</time></span>
+      <span class="meta-sep">|</span>
+      <span class="meta-update">MAJ <time datetime="2026-05-02">02/05/2026</time></span>
+      <span class="meta-sep">|</span>
+      <span>📖 7 min</span>
+    </div>
+
+    <!-- Boutons de partage -->
+    <div class="article-share">
+      <span class="share-label">Partager :</span>
+      <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://enoes.com/actualites/dcg-en-alternance-ou-en-initial-quel-choix-selon-votre-profil-et-votre-niveau-apres-le-bac/" target="_blank" rel="noopener" aria-label="Partager sur LinkedIn" title="LinkedIn">in</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://enoes.com/actualites/dcg-en-alternance-ou-en-initial-quel-choix-selon-votre-profil-et-votre-niveau-apres-le-bac/" target="_blank" rel="noopener" aria-label="Partager sur Facebook" title="Facebook">f</a>
+      <a href="https://twitter.com/intent/tweet?url=https://enoes.com/actualites/dcg-en-alternance-ou-en-initial-quel-choix-selon-votre-profil-et-votre-niveau-apres-le-bac/&text=DCG en alternance ou en initial : quel choix ?" target="_blank" rel="noopener" aria-label="Partager sur X (Twitter)" title="X / Twitter">𝕏</a>
+      <a href="mailto:?subject=DCG en alternance ou en initial&body=Article intéressant à lire : https://enoes.com/actualites/dcg-en-alternance-ou-en-initial-quel-choix-selon-votre-profil-et-votre-niveau-apres-le-bac/" aria-label="Partager par email" title="Email">✉</a>
+      <button type="button" class="copy-link" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Lien copié'">Copier le lien</button>
+    </div>
+  </div>
+
+  <figure class="entry-thumbnail animated fade-in-up">
+    <img width="800" height="600" src="../uploads/2026/04/dcg-alternance-ou-initiale.webp" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="DCG en alternance ou en initial : comparatif et conseils" decoding="async" fetchpriority="high" srcset="../uploads/2026/04/dcg-alternance-ou-initiale.webp 800w, ../uploads/2026/04/dcg-alternance-ou-initiale-300x225.webp 300w, ../uploads/2026/04/dcg-alternance-ou-initiale-768x576.webp 768w" sizes="(max-width: 800px) 100vw, 50vw" />
+  </figure>
+</div>
+</div>
 
 <p>Le DCG est un diplôme exigeant, structurant, qui pose les bases de toute une carrière en comptabilité. Mieux vaut donc partir sur le bon format dès le départ. Le choix entre le DCG (Diplôme de Comptabilité et de Gestion) en alternance ou en formation initiale dépend avant tout de trois éléments : votre autonomie, votre capacité de travail et votre projet professionnel après le bac.</p>
 
@@ -834,36 +820,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="navigation-articles" style="display: flex; justify-content: space-between; margin-top: 20px;"><div class="nav-previous"><a href="https://enoes.com/actualites/remise-de-diplomes-mcca/" title="Remise de diplômes MCCA"> &larr; Remise de diplômes MCCA</a></div><div class="nav-next" style="text-align: right;"><a href="https://enoes.com/actualites/groupe-de-preparation-memoire-du-dec/" title="Groupe de préparation mémoire du DEC">Groupe de préparation mémoire du DEC &rarr;</a></div></div>
       </div>
-      <div class="col s12 l4 offset-l1">
-        <div class="entry-meta">
-                    <div class="entry-meta--info">
-            <span class="icon-32 icon-agenda accent-color" aria-hidden="true"></span>14/04/2026          </div>
-          <div class="entry-meta--info">
-            <span class="icon-32 icon-tag accent-color" aria-hidden="true"></span>
-            <a href="https://enoes.com/categories/blog/" rel="category tag">Blog</a>          </div>
-          <div>
-            <hr class="spacer small">
-            
-<ul class="social-share-buttons">
-<li>Partager cet article</li>
-  <li>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://enoes.com/actualites/dcg-en-alternance-ou-en-initial-quel-choix-selon-votre-profil-et-votre-niveau-apres-le-bac/" class="facebook" aria-label="Partager cet article sur Facebook" rel="noopener" target="_blank">
-      <span class="icon-18 icon-facebook" aria-hidden="true"></span>
-    </a>
-  </li>
-  <li>
-    <a href="https://twitter.com/intent/tweet?text=DCG en alternance ou en initial : quel choix selon votre profil et votre niveau après le bac ?&url=https://enoes.com/actualites/dcg-en-alternance-ou-en-initial-quel-choix-selon-votre-profil-et-votre-niveau-apres-le-bac/" class="twitter" aria-label="Tweeter sur cet article" rel="noopener" target="_blank">
-      <span class="icon-18 icon-twitter" aria-hidden="true"></span>
-    </a>
-  </li>
-  <li>
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://enoes.com/actualites/dcg-en-alternance-ou-en-initial-quel-choix-selon-votre-profil-et-votre-niveau-apres-le-bac/" class="linkedin" aria-label="Partager cet article sur LinkedIn" rel="noopener" target="_blank">
-      <span class="icon-18 icon-linkedin" aria-hidden="true"></span>
-    </a>
-  </li>
-</ul>
-          </div>
-        </div>
+      <div class="col s12 l4 offset-l1 article-sidebar">
+
+<!-- Sommaire cliquable -->
+<details class="article-toc" open>
+  <summary>Sommaire de l'article</summary>
+  <ol>
+    <li><a href="#defi-accessible">Le DCG : un défi accessible ?</a>
+      <ol>
+        <li><a href="#rythme-soutenu">Un rythme soutenu</a></li>
+        <li><a href="#matieres-techniques">Des matières techniques</a></li>
+        <li><a href="#examens-exigeants">Des examens exigeants</a></li>
+        <li><a href="#dynamique-pro">Une dynamique professionnalisante</a></li>
+        <li><a href="#parcours-3-ans">Un parcours sur trois ans</a></li>
+      </ol>
+    </li>
+    <li><a href="#alternance-ou-initial">Alternance ou initial : quel profil ?</a>
+      <ol>
+        <li><a href="#dcg-initial">Le DCG en formation initiale</a></li>
+        <li><a href="#dcg-alternance">Le DCG en alternance</a></li>
+      </ol>
+    </li>
+    <li><a href="#comparatif">Comparatif détaillé</a></li>
+    <li><a href="#du-dcg-au-dscg">Du DCG au DSCG</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ol>
+</details>
 
         
       </div>
