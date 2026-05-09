@@ -198,6 +198,17 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
 		  
 <!-- Custom styles V2 : ajouts UX/SEO sans toucher au theme -->
 <style id="enoes-article-v2-css">
+/* Header article : H1 et image hero re-dimensionnes pour ligne de flottaison */
+.entry-header h1.entry-title{font-size:30px !important;line-height:1.25 !important;margin:12px 0 16px !important;font-weight:700 !important;letter-spacing:-.3px}
+@media (max-width:600px){.entry-header h1.entry-title{font-size:24px !important}}
+.entry-thumbnail{margin:0 0 20px !important;border-radius:12px;overflow:hidden;max-height:340px}
+.entry-thumbnail img{width:100% !important;height:auto !important;max-height:340px !important;object-fit:cover !important;display:block}
+@media (max-width:768px){.entry-thumbnail,.entry-thumbnail img{max-height:240px !important}}
+.main-breadcrumb{margin:0 0 16px !important;padding:0 !important}
+.main-breadcrumb p{font-size:12px !important;color:#82878a !important;margin:0 !important}
+.main-breadcrumb p a{color:#15a8b4 !important;text-decoration:none}
+.main-breadcrumb p strong{color:#575757 !important;font-weight:500 !important}
+
 /* Bloc auteur en haut */
 .article-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 0;border-top:1px solid #ececec;border-bottom:1px solid #ececec;margin:20px 0;font-size:13px;color:#82878a}
 .article-meta .meta-author{display:flex;align-items:center;gap:10px}
