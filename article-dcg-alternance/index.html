@@ -221,8 +221,9 @@ main > .wrapper > .row > .col.l4.article-sidebar{max-width:none !important;width
   main > .wrapper > .row > .col.l7{grid-column:1}
 }
 
-/* Sidebar avec sommaire sticky compact */
-.article-sidebar{position:sticky;top:24px;align-self:flex-start}
+/* Sidebar avec sommaire sticky compact (decalee sous le header sticky 130px) */
+.article-sidebar{position:sticky;top:150px;align-self:flex-start}
+.article-sidebar .article-toc{max-height:calc(100vh - 170px);overflow-y:auto}
 .article-sidebar .article-toc{margin:0 0 24px;padding:16px 18px;background:#f9f9fb;border-left:3px solid #15a8b4}
 .article-sidebar .article-toc summary{font-size:14px}
 .article-sidebar .article-toc ol{padding-left:18px;margin:12px 0 0}
